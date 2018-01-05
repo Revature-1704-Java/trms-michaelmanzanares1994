@@ -1,12 +1,11 @@
 package com.revature.bean;
 
 public class Employee {
-
 	private int empId;
 	private String fname;
 	private String lname;
 	private String email;
-	private int availReimAmt;
+	private Double availReimAmt;
 	private int empTypeId;
 	private String username;
 	private String password;
@@ -17,16 +16,15 @@ public class Employee {
 				+ ", availReimAmt=" + availReimAmt + ", empTypeId=" + empTypeId + ", username=" + username
 				+ ", password=" + password + "]";
 	}
+
+	public String availAmtString() {
+		return "availReimAmt";
+	}
+
 	public Employee() {
 	}
-	
-	public Employee(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
-	}
-	
-	public Employee(int empId, String fname, String lname, String email, int availReimAmt, int empTypeId,
+
+	public Employee(int empId, String fname, String lname, String email, Double availReimAmt, int empTypeId,
 			String username, String password) {
 		super();
 		this.empId = empId;
@@ -38,7 +36,7 @@ public class Employee {
 		this.username = username;
 		this.password = password;
 	}
-	
+
 	public int getEmpId() {
 		return empId;
 	}
@@ -55,11 +53,11 @@ public class Employee {
 		this.email = email;
 	}
 
-	public int getAvailReimAmt() {
+	public Double getAvailReimAmt() {
 		return availReimAmt;
 	}
 
-	public void setAvailReimAmt(int availReimAmt) {
+	public void setAvailReimAmt(Double availReimAmt) {
 		this.availReimAmt = availReimAmt;
 	}
 

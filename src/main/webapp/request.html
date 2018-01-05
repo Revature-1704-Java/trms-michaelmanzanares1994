@@ -1,14 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+	crossorigin="anonymous">
 <title>Request</title>
 </head>
 <body>
-	<h2>Request a Reimbursement</h2>
-
-	<form action="RequestServlet" method="GET">
-		<input type="submit" value="GET">
+	<div class="p-3 mb-2 bg-primary text-white">
+		<h2>Reimbursement Form</h2>
+	</div>
+	<div class="container">
+		<div class="btn-group btn-group-justified">
+			<a href="dashboard.html" class="btn btn-primary">Dashboard</a> <a
+				href="request.html" class="btn btn-primary">Reimbursement Form</a> <a
+				href="approve.html" class="btn btn-primary">Approval Form</a> <a
+				href="LogoutServlet" class="btn btn-primary">Logout</a>
+		</div>
+	</div>
+	<form action="RequestServlet" method="post">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="user">Enter
+						Event ID Number </label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" id="eventId"
+							placeholder="Event ID" name="eventId" required>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="eventCost">Enter
+						Grading Format Id </label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" id="gradingFormat"
+							placeholder="Grading Format" name="gradingFormat">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="eventCost">Enter
+						Cost of Event </label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" id="cost"
+							placeholder="Event Cost" name="cost" required>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="workJust">Enter
+						Work Justification </label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="justification"
+							placeholder="Work Justification" name="justification">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="reset" class="btn btn-primary">Clear Form</button>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary">Submit Form</button>
+			</div>
+		</div>
 	</form>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+		integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+		integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+		integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+		crossorigin="anonymous"></script>
 </body>
 </html>
